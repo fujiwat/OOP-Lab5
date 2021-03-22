@@ -25,15 +25,7 @@ public class Matrix {
     }
 
     public Matrix(Matrix matrix) {
-        double[][] data;
-        data = matrix.data;
-        this.rows = data.length;
-        this.columns = data[0].length;
-        this.data = new double[data.length][];
-        for (int i = 0; i < data.length; i++) {
-            this.data[i] = new double[data[i].length];
-            System.arraycopy(data[i], 0, this.data[i], 0, data[i].length);
-        }
+        this(matrix.data);      // call the other constructor
     }
 
     // method

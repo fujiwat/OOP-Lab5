@@ -14,7 +14,7 @@ public class BankAccount {
         this.accountNumber = generateAccountNumber();
     }
 
-    private String generateAccountNumber() {
+    private static String generateAccountNumber() {
         // returns the string of latest account number
         String str = Integer.toString(numAccounts);
         return PREFIX + "0".repeat(ACCOUNT_NUMBER_LENTH - PREFIX.length() - str.length()) + str;
