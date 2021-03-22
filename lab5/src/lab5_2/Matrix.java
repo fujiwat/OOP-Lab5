@@ -61,9 +61,9 @@ public class Matrix {
             str = "";
             for (int j = 0; j < data[i].length; j++) {
                 if (str.equals("")) {
-                    str = str + data[i][j];
+                    str = str + String.format("%.2f", data[i][j]);
                 } else {
-                    str = str + ", " + data[i][j];
+                    str = str + ", " + String.format("%.2f", data[i][j]);
                 }
             }
             System.out.print(str + " }");
